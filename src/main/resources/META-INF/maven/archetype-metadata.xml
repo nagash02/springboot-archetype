@@ -1,9 +1,54 @@
-<archetype>
-  <id>springboot-trabajando-archetype</id>
-  <sources>
-    <source>src/main/java/App.java</source>
-  </sources>
-  <testSources>
-    <source>src/test/java/AppTest.java</source>
-  </testSources>
-</archetype>
+<archetype-descriptor
+	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 
+											http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+	name="springboot-archetypt">
+
+
+	<requiredProperties>
+		<requiredProperty key="camelCaseRootArtifactId">
+			<defaultValue>api_ejemplo</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="serverPort">
+			<defaultValue>8080</defaultValue>
+		</requiredProperty>
+	</requiredProperties>
+
+	<fileSets>
+		<fileSet filtered="true" packaged="false">
+			<directory></directory>
+			<includes>
+				<include>pom.xml</include>
+				<include>.gitignore</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>src/main/java/</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>src/main/resources/</directory>
+			<includes>
+				<include>mappers/**</include>
+				<include>config/**</include>
+				<include>static/**</include>
+				<include>templates/**</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="false">
+			<directory>src/main/resources/</directory>
+			<includes>
+				<include>logback.xml</include>
+			</includes>
+		</fileSet>
+	</fileSets>
+</archetype-descriptor>

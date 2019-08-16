@@ -1,4 +1,4 @@
-package cl.trabajando.api_ejemplo;
+package ${package};
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -19,10 +19,10 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import cl.trabajando.api_ejemplo.config.GlobalConfiguration;
-import cl.trabajando.api_ejemplo.config.SecurityConfiguration;
-import cl.trabajando.api_ejemplo.config.SwaggerConfiguracion;
-import cl.trabajando.api_ejemplo.model.HolaMundo;
+import ${package}.config.GlobalConfiguration;
+import ${package}.config.SecurityConfiguration;
+import ${package}.config.SwaggerConfiguracion;
+import ${package}.model.HolaMundo;
 
 @Test
 @SpringBootTest(properties = { "logstash.host=localhost", "logstash.port=4560",

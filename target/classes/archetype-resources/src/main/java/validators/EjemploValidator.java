@@ -1,4 +1,4 @@
-package cl.trabajando.api_ejemplo.validators;
+package ${package}.validators;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -13,8 +13,8 @@ import javax.validation.Payload;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import cl.trabajando.api_ejemplo.model.DatoEjemplo;
-import cl.trabajando.api_ejemplo.validators.EjemploValidator.EjemploValidatorHelper;
+import ${package}.model.DatoEjemplo;
+import ${package}.validators.EjemploValidator.EjemploValidatorHelper;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)

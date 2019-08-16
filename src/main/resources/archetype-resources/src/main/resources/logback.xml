@@ -1,16 +1,14 @@
 <configuration>
-<!-- <if condition='isDefined("LOGSTASH_HOST")'> -->
-<if condition='true'>
+<if condition='isDefined("LOGSTASH_HOST")'>
     <then>
-       <!-- <property scope="context" name="LOGSTASH_HOST" value="${LOGSTASH_HOST:-localhost}"/> -->
-       <property scope="context" name="LOGSTASH_HOST" value="192.168.1.228"/>
-        <property scope="context" name="LOGSTASH_PORT" value="5000"/>
+        <property scope="context" name="LOGSTASH_HOST" value="${LOGSTASH_HOST:-localhost}"/>
+        <property scope="context" name="LOGSTASH_PORT" value="${LOGSTASH_PORT:-4560}"/>
         <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
             <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-                <level>DEBUG</level>
+                <level>INFO</level>
             </filter>
             <layout class="ch.qos.logback.classic.PatternLayout">
-                <Pattern>C/L %mdc %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+                <Pattern>C/L %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
                 </Pattern>
             </layout>
         </appender>
@@ -28,11 +26,11 @@
         </root>
     </then>
 </if>
-<!-- <if condition='!isDefined("LOGSTASH_HOST")'>
+<if condition='!isDefined("LOGSTASH_HOST")'>
     <then>
         <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
             <layout class="ch.qos.logback.classic.PatternLayout">
-                <Pattern>S/L %mdc %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+                <Pattern>S/L %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
                 </Pattern>
             </layout>
         </appender>        
@@ -40,5 +38,5 @@
             <appender-ref ref="STDOUT"/>
         </root>
     </then>
-</if>-->
+</if>
 </configuration>

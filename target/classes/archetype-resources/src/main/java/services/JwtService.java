@@ -1,4 +1,4 @@
-package cl.trabajando.api_ejemplo.services;
+package ${package}.services;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -11,8 +11,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import cl.trabajando.api_ejemplo.exceptions.TrabajandoException;
-import cl.trabajando.api_ejemplo.helpers.TrabajandoRestBadRequestBuilder;
+import ${package}.exceptions.TrabajandoException;
+import ${package}.helpers.TrabajandoRestBadRequestBuilder;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.JwtException;

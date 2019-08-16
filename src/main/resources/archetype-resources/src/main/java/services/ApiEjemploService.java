@@ -1,15 +1,15 @@
-package cl.trabajando.api_ejemplo.services;
+package ${package}.services;
 
 import java.time.LocalDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cl.trabajando.api_ejemplo.model.DatoEjemplo;
-import cl.trabajando.api_ejemplo.model.DatoEjemploMongo;
-import cl.trabajando.api_ejemplo.model.HolaMundo;
-import cl.trabajando.api_ejemplo.repo.HolaMundoRepo;
-import cl.trabajando.api_ejemplo.repo.mongo.MongoRepoEjemplo;
+import ${package}.model.DatoEjemplo;
+import ${package}.model.DatoEjemploMongo;
+import ${package}.model.HolaMundo;
+import ${package}.repo.HolaMundoRepo;
+import ${package}.repo.mongo.MongoRepoEjemplo;
 
 /**
  * 

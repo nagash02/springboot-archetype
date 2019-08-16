@@ -1,4 +1,4 @@
-package cl.trabajando.api_ejemplo.repo;
+package ${package}.api_ejemplo.repo;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
 
-import cl.trabajando.api_ejemplo.exceptions.TrabajandoException;
-import cl.trabajando.api_ejemplo.mappers.HolaMundoMapper;
-import cl.trabajando.api_ejemplo.model.DatoEjemplo;
+import ${package}.exceptions.TrabajandoException;
+import ${package}.mappers.HolaMundoMapper;
+import ${package}.model.DatoEjemplo;
 
 @Repository("nominaRepo")
 public class HolaMundoRepo {

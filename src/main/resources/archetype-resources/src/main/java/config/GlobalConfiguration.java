@@ -32,7 +32,7 @@ import ${package}.interceptors.MDCInterceptor;
 import ${package}.mappers.HolaMundoMapper;
 
 @Configuration
-@SpringBootApplication
+@SpringBootApplication 
 @ComponentScan(basePackages = { "${package}.controllers", "${package}.services",
 	"${package}.controllers_advices", "${package}.repo" })
 public class GlobalConfiguration implements WebMvcConfigurer {
